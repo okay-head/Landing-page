@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+   <title>Document</title>
+
+   <style>
+      body,
+      html {
+         height: 100%;
+         font-family: 'Montserrat', sans-serif;
+
+      }
+
+      * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+      }
+
+      .page1,
+      .page2,
+      .page3,
+      .page4,
+      .page-review {
+         position: relative;
+      }
+
+      .page2,
+      .page3,
+      .page4 {
+         height: 70vh;
+      }
+
+
+      .page2,
+      .page3,
+      .page4 {
+         background-color: rgb(255, 255, 255);
+      }
+
+      img {
+         position: absolute;
+      }
+
+      /* ---------page1------------- */
+      .page1 {
+         height: 100vh;
+         background-color: black;
+         color: white;
+         padding-top: 2.2%;
+      }
+
+      .page1 img {
+         top: 40%;
+         right: 30.5%;
+         width: 510px;
+         height: 262px;
+      }
+
+      nav {
+         /* display: inline-block; */
+         /* width: 40%; */
+         padding-left: 56%;
+         padding-right: 4%;
+         position: relative;
+      }
+
+      nav span {
+         position: absolute;
+         top: -0%;
+         left: 5%;
+         font-size: 2.2em;
+      }
+
+      ul {
+         list-style-type: none;
+         display: flex;
+         /* flex-flow: row nowrap; */
+         justify-content: flex-end;
+         align-items: center;
+         /* background-color: rgb(15, 15, 15);
+         border-radius: 30px; */
+         /* font-family: 'Montserrat', sans-serif; */
+      }
+
+      ul li {
+         flex: 1 1 0;
+      }
+
+      ul li a {
+         text-decoration: none;
+         display: inline-block;
+         /* border: 1px solid red; */
+         /* padding: 20px 35px; */
+         padding: 13px 23px;
+         text-transform: uppercase;
+         color: white;
+      }
+
+      #buy {
+         background-color: white;
+         color: black;
+         border-radius: 30px;
+         font-weight: 900;
+      }
+
+      /* ------------------------  page2  --------------------------- */
+
+      section {
+         width: 30%;
+         position: absolute;
+         text-align: justify;
+      }
+
+      h2 {
+         font-size: 2.5em;
+         margin-bottom: 12px;
+         text-align: initial;
+      }
+
+      .page2 img {
+         top: 16%;
+         left: 15%;
+         width: 345px;
+         height: 463px;
+      }
+
+      .page2 section {
+
+         top: 36%;
+         right: 23%;
+      }
+
+      /* ------------------------  page3  --------------------------- */
+
+
+      /* .page2,.page3,.page4{
+         background-color: rgb(0 0 0 / 84%);
+      } */
+      .page3 img {
+         top: 31%;
+         right: 14%;
+         width: 279px;
+         height: 303px;
+         box-shadow: 0 0 5px rgb(4, 209, 209);
+      }
+
+      .page3 section {
+         top: 40%;
+         left: 25%;
+      }
+
+      /* ------------------------  page4  --------------------------- */
+
+      .page4 img {
+         top: 29%;
+         left: 8%;
+         width: 636px;
+         height: 229px;
+      }
+
+      .page4 section {
+         top: 29%;
+         right: 11%;
+      }
+
+      /* ------------------ features--------------- */
+
+      .features {
+         display: flex;
+         padding: 0 3.4%;
+         background-color: rgb(57 57 57);
+         color: white;
+      }
+
+      .features>div {
+         padding: 3em;
+         /* flex: 1 1 0; */
+      }
+
+      h3 {
+         color: #0ed9ff;
+         margin-bottom: 10px;
+      }
+
+      /* -------------------reviews-------------------- */
+
+      .page-review {
+         height: 105vh;
+         text-align: center;
+         padding-top: 7.5%;
+      }
+
+      .page-review h1{
+         font-size: 3em;
+         font-weight: 900;
+         margin-bottom: 2%;
+      }
+      .page-review .box {
+         text-align: initial;
+         width: 75%;
+         margin: 0 auto;
+         /* border: 1px solid cyan; */
+         /* box-shadow: 0 0 5px black; */
+         /* padding: 1em; */
+         /* background-color: rgb(0 0 0 / 9%); */
+         display: flex;
+         flex-flow: row wrap;
+         justify-content: space-between;
+      }
+
+      .box>div{
+         /* box-shadow: 0 0 5px black; */
+         border-left: 4px solid #0ed9ff;
+         margin: 40px 15px;
+         padding: 20px 45px;
+         flex: 1 1 45%;
+         width: 50px;
+         position: relative;
+      }
+
+      .box>div::before{
+         content: '"';
+         /* font-weight: 900; */
+         font-size: 1.5em;
+         position: absolute;
+         top:10px;
+         left: 32px;
+      }
+      /* .box .a{
+         flex: 0 1 100%;
+      } */
+
+     
+
+      .box>div>span{
+         display: inline-block;
+         margin-top: 10px;
+         font-weight: bold;
+         /* color: #0db9d8; */
+      }
+      
+
+
+      /* --------------------- contact------------ */
+
+      .contact{
+         height: 100vh;
+         background-color: rgb(57 57 57);
+      }
+   </style>
+</head>
+
+<body>
+   <div class="page1">
+      <nav>
+         <span>LOGO</span>
+         <ul>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Reviews</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#" id="buy">Buy now</a></li>
+         </ul>
+      </nav>
+      <!-- <img src="mouse-final.png" alt="mouse"> -->
+      <img src="mouse-final.png" alt="mouse">
+   </div>
+
+
+   <div class="page2">
+      <img src="mouse-top-new.-finalpng.png" alt="mouse top view">
+      <section>
+         <h2>8 programmable buttons</h2>
+         <span>Customize your pc gaming experience with highly programmable buttons you can save to Hyperion Fury’s
+            onboard memory for maximum speed and accessibility. Chat with a teammate, execute a multi-command macro or
+            downshift DPI with fast one-press triggers. Gaming Software makes setting up commands easy.</span>
+      </section>
+
+   </div>
+
+   <div class="page3">
+      <img src="new-processor.png" alt="processor">
+      <section>
+         <h2>32-bit ARM Processor</h2>
+         <span>
+            Hyperion Fury’s on-board Arm Processor powers the Fusion Engine for incredible tracking speeds.The excellent
+            power consumption and heat dissipation makes Arm a great fit for small, portable devices. It also works with
+            mouse's gaming software to let you craft and assign macros that you can access with ease.</span>
+      </section>
+   </div>
+
+   <div class="page4">
+      <img src="side-mouse.png" alt="side-view-mouse">
+      <section>
+         <h2>4 on-the-fly DPI settings</h2>
+         <span>
+            Instantly downshift for pixel-perfect sniping or shift up for high-speed maneuvers—all with maximum
+            precision. Go from 4000 to 250 DPI in the blink of an eye, giving you the flexibility to thrive in the chaos
+            of battle. Use Logitech Gaming Software to set a fifth DPI setting and personalize the experience to your
+            liking.</span>
+      </section>
+   </div>
+
+
+   <div class="features">
+
+      <div>
+         <h3>Lag free</h3>
+         The Ultra Custom has a 1ms USB report rate, optimized MCU and latest R&D wireless technology making input lag
+         virtually negligible.
+      </div>
+
+      <div>
+         <h3>Ergonomic design</h3>
+         We updated the classic G400s shape to a new level of streamlined comfort. Lightweight materials and super-low
+         friction feet ensure that your gaming sessions last as long as you can.
+      </div>
+
+
+
+      <div>
+         <h3>High-speed Fusion Engine </h3>
+         The exclusive Fusion Engine and Delta Zero sensor give you the power to track reliably and accurately at speeds
+         that no other mouse can handle—as fast as 10 meters per second (420 ips).
+      </div>
+
+
+   </div>
+
+   <div class="page-review">
+      <h1>REVIEWS</h1> <br>
+      <div class="box">
+         <div class="a">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis quidem nihil asperiores vel libero earum voluptates porro minima, tempore assumenda deleniti cum veniam vero iste voluptas corporis. Placeat, aspernatur ut." <br>
+            <span>- Rosa Diaz</span>
+         </div>
+
+         <div class="b">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis quidem nihil asperiores vel libero earum voluptates porro minima, tempore assumenda deleniti cum veniam vero iste voluptas corporis. Placeat, aspernatur ut." <br>
+            <span>- Charles Boyle</span>
+         </div>
+         
+         <div class="c">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis quidem nihil asperiores vel libero earum voluptates porro minima, tempore assumenda deleniti cum veniam vero iste voluptas corporis. Placeat, aspernatur ut." <br>
+            <span>- Jake Paul</span>
+         </div>
+         <div class="d">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque corrupti eveniet repudiandae voluptates iusto cum rem saepe impedit veniam expedita blanditiis nisi placeat vitae, distinctio nihil. Iure rem aliquam facilis." <br>
+            <span>- Amy Santiago</span>
+         </div>
+            
+      </div>
+   </div>
+
+   <div class="contact">
+      <h1 style="text-align: center;">CONTACT</h1>
+
+   </div>
+</body>
+
+</html>
