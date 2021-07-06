@@ -9,6 +9,10 @@
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Rambla&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap" rel="stylesheet">
    <title>Document</title>
 
    <style>
@@ -16,6 +20,7 @@
       html {
          height: 100%;
          font-family: 'Montserrat', sans-serif;
+         scroll-behavior: smooth;
 
       }
 
@@ -29,7 +34,8 @@
       .page2,
       .page3,
       .page4,
-      .page-review {
+      .page-review,
+      .buy {
          position: relative;
       }
 
@@ -58,11 +64,44 @@
          padding-top: 2.2%;
       }
 
+      .page1 div {
+         width: 50%;
+         font-size: 3em;
+         position: relative;
+         top: 16%;
+         left: 13.5%;
+         /* font-family: 'Rambla', sans-serif; */
+         /* font-family: 'Merriweather Sans', sans-serif; */
+         font-family: 'PT Sans', sans-serif;
+      }
+
       .page1 img {
-         top: 40%;
-         right: 30.5%;
-         width: 510px;
-         height: 262px;
+         top: 37%;
+         right: 10.5%;
+         width: 496px;
+         height: 267px;
+      }
+
+      #name1 {
+         margin: -9% 0 6% -10px;
+         display: inline-block;
+         font-size: 3.2em;
+         color: #0ed9ff;
+         position: relative;
+         /* text-shadow: 2px 2px 2px black,
+          4px 4px 4px white,
+          6px 6px 6px black
+       */
+      }
+
+      #name1::after {
+         content: '';
+         width: 88%;
+         background-color: white;
+         height: 10px;
+         position: absolute;
+         bottom: 0%;
+         left: 1%;
       }
 
       nav {
@@ -96,6 +135,7 @@
       }
 
       ul li a {
+         transition: 0.3s ease all;
          text-decoration: none;
          display: inline-block;
          /* border: 1px solid red; */
@@ -105,11 +145,23 @@
          color: white;
       }
 
+      ul li a:hover{
+         font-weight: bold;
+      }
+
+      #buy:hover{
+         border: 2px solid white;
+         color:white;
+         background-color: black;
+
+      }
       #buy {
+         box-sizing: border-box;
          background-color: white;
          color: black;
          border-radius: 30px;
          font-weight: 900;
+         height: 46px;
       }
 
       /* ------------------------  page2  --------------------------- */
@@ -150,7 +202,8 @@
          right: 14%;
          width: 279px;
          height: 303px;
-         box-shadow: 0 0 5px rgb(4, 209, 209);
+         box-shadow: 0 0 5px rgb(4, 209, 209),
+            0 0 4px black;
       }
 
       .page3 section {
@@ -177,7 +230,7 @@
       .features {
          display: flex;
          padding: 0 3.4%;
-         background-color: rgb(57 57 57);
+         background-color: rgb(60 60 60);
          color: white;
       }
 
@@ -196,14 +249,32 @@
       .page-review {
          height: 105vh;
          text-align: center;
-         padding-top: 7.5%;
+         padding-top: 5.2%;
       }
 
-      .page-review h1{
-         font-size: 3em;
+      .page-review h1 {
+         font-size: 3.5em;
          font-weight: 900;
          margin-bottom: 2%;
+         position: relative;
       }
+
+      .page-review h1::after,
+      .contact h1::after {
+         content: '';
+         width: 15.7%;
+         background-color: #0ed9ff;
+         height: 8px;
+         position: absolute;
+         bottom: -27%;
+         left: 41.5%;
+         /* box-shadow: 0px 0px 1px black; */
+      }
+
+      /* 
+      .page-review h1::after{
+         add an underline here
+      } */
       .page-review .box {
          text-align: initial;
          width: 75%;
@@ -217,44 +288,177 @@
          justify-content: space-between;
       }
 
-      .box>div{
-         /* box-shadow: 0 0 5px black; */
-         border-left: 4px solid #0ed9ff;
-         margin: 40px 15px;
+      .box>div {
+         box-shadow: 2px 2px 2px #00000085;
+         /* border-left: 4px solid #0ed9ff; */
+         margin: 32px 15px;
          padding: 20px 45px;
          flex: 1 1 45%;
          width: 50px;
          position: relative;
+         background-color: #8080801a;
       }
 
-      .box>div::before{
+      .box>div::before {
          content: '"';
          /* font-weight: 900; */
          font-size: 1.5em;
          position: absolute;
-         top:10px;
+         top: 10px;
          left: 32px;
       }
+
       /* .box .a{
          flex: 0 1 100%;
       } */
 
-     
 
-      .box>div>span{
+
+      .box>div>span {
          display: inline-block;
          margin-top: 10px;
          font-weight: bold;
          /* color: #0db9d8; */
       }
-      
 
+      /* ---------------------- buy -------------------------- */
+      .buy {
+         height: 100vh;
+         background-color: black;
+         color: white;
+         display: flex;
+         justify-content: space-between;
+      }
+
+
+      .buy>div {
+         padding: 2em;
+         margin: 2em;
+      }
+
+      .buy .left,
+      .buy .right {
+         position: relative;
+      }
+
+      .buy .left .text {
+         font-size: 4.8em;
+         position: relative;
+         top: 10%;
+         left: 15%;
+      }
+
+      .buy .right img {
+         position: relative;
+         width: 65%;
+         height: 51%;
+         margin-left: 18%;
+         top: 10%;
+         /* box-shadow: 2px 2px 2px white,
+         -2px -2px 2px white; */
+         /* box-shadow: 2px 0 0 white,
+            0 2px 0 white; */
+      }
+
+      .buy .right::after {
+         /* content: '';
+         width: 61%;
+         height: 47%;
+         position: absolute;
+         left: 20%;
+         top: 14%;
+         border-right: 3px solid rgb(0, 68, 255);
+         border-bottom: 3px solid rgb(0, 68, 255); */
+         /* transform: skew(-3deg, 2deg); */
+         /* transform: skew(-3deg, 2deg); */
+         content: '';
+         width: 61%;
+         height: 46%;
+         position: absolute;
+         left: 19.7%;
+         top: 14%;
+         /* border: 2px solid white; */
+         box-shadow: 2px 2px 2px white;
+      }
+
+      .buy .right a {
+         display: inline-block;
+         text-decoration: none;
+         color: black;
+         background-color: white;
+         padding: 22px 50px;
+         position: relative;
+         top: 18%;
+         left: 37%;
+         font-size: 1.4em;
+         font-weight: 900;
+         /* border: 5px solid #005fff; */
+         /* box-shadow: 3px 3px 4px #005fff; */
+         border-radius: 4px;
+      }
 
       /* --------------------- contact------------ */
 
-      .contact{
+      .contact {
          height: 100vh;
-         background-color: rgb(57 57 57);
+         position: relative;
+      }
+
+      .contact h1 {
+         text-align: center;
+         font-size: 3.5em;
+         margin: 6% auto;
+         position: relative;
+      }
+
+
+      label {
+         /* text-align: left; */
+         display: block;
+         margin-bottom: 5px;
+         font-weight: bold;
+      }
+
+      label::after {
+         content: '*';
+      }
+
+      input[type=text] {
+         width: 100%;
+         margin-bottom: 18px;
+         border: 2px solid black;
+
+      }
+
+      input[id=name],
+      input[id=email] {
+         height: 40px;
+      }
+
+      input[id=message] {
+         height: 200px;
+      }
+
+      form {
+         width: 40%;
+         margin: 0 auto;
+         display: flex;
+         flex-flow: column nowrap;
+         /* justify-content: center; */
+         align-items: flex-start;
+      }
+
+      form span {
+         margin-left: 5px;
+         cursor: pointer;
+         padding: 9px 12px;
+         color: white;
+         font-size: inherit;
+         background-color: black;
+      }
+
+      form span:hover {
+         transform: scale(1.02);
       }
    </style>
 </head>
@@ -262,20 +466,21 @@
 <body>
    <div class="page1">
       <nav>
-         <span>LOGO</span>
+         <!-- <span>LOGO</span> -->
          <ul>
-            <li><a href="#">Features</a></li>
-            <li><a href="#">Reviews</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#reeviews">Reviews</a></li>
             <li><a href="#">About</a></li>
-            <li><a href="#" id="buy">Buy now</a></li>
+            <li><a href="#bnow" id="buy">Buy now</a></li>
          </ul>
       </nav>
       <!-- <img src="mouse-final.png" alt="mouse"> -->
+      <div><span id="name1"> MZH02</span> <br>Lighter<br>Faster <br>Better than ever</div>
       <img src="mouse-final.png" alt="mouse">
    </div>
 
 
-   <div class="page2">
+   <div class="page2"  id="features">
       <img src="mouse-top-new.-finalpng.png" alt="mouse top view">
       <section>
          <h2>8 programmable buttons</h2>
@@ -335,33 +540,72 @@
 
    </div>
 
-   <div class="page-review">
+   <div class="page-review" id="reeviews">
       <h1>REVIEWS</h1> <br>
       <div class="box">
          <div class="a">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis quidem nihil asperiores vel libero earum voluptates porro minima, tempore assumenda deleniti cum veniam vero iste voluptas corporis. Placeat, aspernatur ut." <br>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis quidem nihil asperiores vel libero
+            earum voluptates aspernatur ut. Lorem ipsum dolor sit vel aliquid amet dignissimos porro minima, tempore
+            assumenda deleniti cum veniam vero iste voluptas corporis. Placeat,
+            aspernatur ut. Lorem ipsum dolor sit vel aliquid amet dignissimos voluptates, laboriosam, mollitia eaque
+            " <br>
             <span>- Rosa Diaz</span>
          </div>
 
          <div class="b">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis quidem nihil asperiores vel libero earum voluptates porro minima, tempore assumenda deleniti cum veniam vero iste voluptas corporis. Placeat, aspernatur ut." <br>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis quidem nihil asperiores vel libero
+            earum voluptates aspernatur ut. Lorem ipsum dolor sit vel aliquid amet dignissimos porro minima, tempore
+            assumenda deleniti cum veniam vero iste voluptas corporis. Placeat,
+            aspernatur ut. Lorem ipsum dolor sit vel aliquid amet dignissimos voluptates, laboriosam, mollitia eaque
+            " <br>
             <span>- Charles Boyle</span>
          </div>
-         
+
          <div class="c">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis quidem nihil asperiores vel libero earum voluptates porro minima, tempore assumenda deleniti cum veniam vero iste voluptas corporis. Placeat, aspernatur ut." <br>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis quidem nihil asperiores vel libero
+            earum voluptates porro minima, tempore assumenda deleniti cum veniam vero iste voluptas corporis. Placeat,
+            aspernatur ut. Lorem ipsum dolor sit vel aliquid amet dignissimos voluptates, laborios aspernatur ut. Lorem
+            ipsum dolor sit vel aliquid amet dignissimos am, mollitia eaque
+            " <br>
             <span>- Jake Paul</span>
          </div>
          <div class="d">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque corrupti eveniet repudiandae voluptates iusto cum rem saepe impedit veniam expedita blanditiis nisi placeat vitae, distinctio nihil. Iure rem aliquam facilis." <br>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis quidem nihil asperiores vel libero
+            earum voluptates porro minima, tempore assumenda deleniti cum veniam vero iste voluptas corporis. Placeat,
+            aspernatur ut. Lorem ipsum dolor sit vel aliquid amet dignissimos aspernatur ut. Lorem ipsum dolor sit vel
+            aliquid amet dignissimos voluptates, laboriosam, mollitia eaque
+            " <br>
             <span>- Amy Santiago</span>
          </div>
-            
+
       </div>
    </div>
 
+   <div class="buy" id="bnow">
+      <div class="left">
+         <div class="text">
+            Perfect companion <br>for your <br>gaming setup
+         </div>
+      </div>
+      <div class="right"><img
+            src="https://www.newshub.co.nz/home/new-zealand/2020/02/gaming-industry-charges-forward-as-earnings-double-since-2017/_jcr_content/par/image.dynimg.1280.q75.jpg/v1581115957421/Getty-images-gaming-1120.jpg"
+            alt="">
+         <a href="#new">BUY NOW</a>
+      </div>
+   </div>
    <div class="contact">
-      <h1 style="text-align: center;">CONTACT</h1>
+      <h1>CONTACT</h1>
+      <div class="form">
+         <form>
+            <label for="name">Name</label>
+            <input type="text" id="name"><br>
+            <label for="email">Email</label>
+            <input type="text" id="email"><br>
+            <label for="message">Message</label>
+            <input type="text" id="message">
+            <span>Submit</span>
+         </form>
+      </div>
 
    </div>
 </body>
