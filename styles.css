@@ -458,9 +458,10 @@ h3 {
 .buy .right a {
    display: inline-block;
    text-decoration: none;
-   color: black;
-   background-color: white;
-   padding: 22px 50px;
+   background-color: black;
+   color: white;
+   border: 1px solid white;
+   padding: 25px 50px;
    position: relative;
    top: 18%;
    left: 37%;
@@ -469,6 +470,12 @@ h3 {
    /* border: 5px solid #005fff; */
    /* box-shadow: 3px 3px 4px #005fff; */
    border-radius: 4px;
+   transition: 0.5s ease all;
+}
+
+.buy .right a:hover{
+   color: black;
+   background-color: white;
 }
 
 /* --------------------- contact------------ */
