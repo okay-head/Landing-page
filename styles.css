@@ -74,14 +74,20 @@ img {
        */
 }
 
-#name1 #underline {
-   width: 88%;
+.underline {
    background-color: white;
    height: 10px;
    position: absolute;
    bottom: 0%;
    left: 1%;
+   width: 0;
+   transition: 1s ease all;
 }
+
+.width-in{
+   width: 88%;
+}
+
 /* 
 #name1::after {
    content: "";
@@ -316,15 +322,19 @@ h3 {
    position: relative;
 }
 
-.page-review h1 span,
-.contact h1 span{
-   width: 15.7%;
+.underline2{
+   width: 0;
    background-color: #0ed9ff;
    height: 8px;
    position: absolute;
    bottom: -27%;
    left: 41.5%;
+   transition: 0.9s ease all;
 } 
+
+.width-in2{
+   width: 15.7%;
+}
 /* 
 .page-review h1::after,
 .contact h1::after {

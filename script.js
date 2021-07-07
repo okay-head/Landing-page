@@ -17,6 +17,11 @@ const reviewBoxes = document.querySelector('.box');
 const buyText = document.querySelector('.buy .text');
 const buyRight = document.querySelector('.right');
 const form = document.getElementsByTagName('form')[0];
+const whiteUnderline = document.querySelector('.underline');
+const reviewH1 = document.querySelector('.page-review h1 span') ;
+const contactH1 = document.querySelector('.contact h1 span');
+
+
 // initialisations
 
 lighter.classList.add('hide2');
@@ -41,6 +46,10 @@ function classMgmt(element,rClass,aClass) {
    element.classList.remove(rClass);
    element.classList.add(aClass);
 }
+
+window.setTimeout(function () {
+   whiteUnderline.classList.add('width-in');
+},600)
 
 window.setTimeout(function () {
    classMgmt(lighter,'hide2','fade-right');
@@ -71,6 +80,7 @@ window.onscroll = function bonk() {
    }
    if (root.scrollTop>2330) {
       classMgmt(reviewBoxes,'hide','fade-up');
+      reviewH1.classList.add('width-in2');
    }
    if (root.scrollTop>3140) {
       classMgmt(buyText,'hide2','fade-right');
@@ -78,5 +88,7 @@ window.onscroll = function bonk() {
    }
    if (root.scrollTop>3885) {
       classMgmt(form,'hide','fade-up');
+      contactH1.classList.add('width-in2');
    }
 }
+
