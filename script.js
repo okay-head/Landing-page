@@ -24,23 +24,27 @@ const contactH1 = document.querySelector('.contact h1 span');
 
 // initialisations
 
-lighter.classList.add('hide2');
-faster.classList.add('hide2');
-better.classList.add('hide2');
+function init(element,className) {
+   element.classList.add(className);
+}
 
-p2img.classList.add('hide');
-p2section.classList.add('hide');
-p3img.classList.add('hide');
-p3section.classList.add('hide');
-p4img.classList.add('hide');
-p4section.classList.add('hide');
+init(lighter,'hide2');
+init(faster,'hide2');
+init(better,'hide2');
 
-featureSection.classList.add('opacity');
-reviewBoxes.classList.add('hide');
-buyText.classList.add('hide2');
-buyRight.classList.add('hide');
+init(p2img,'hide');
+init(p2section,'hide');
+init(p3img,'hide');
+init(p3section,'hide');
+init(p4img,'hide');
+init(p4section,'hide');
 
-form.classList.add('hide');
+init(featureSection,'opacity');
+init(reviewBoxes,'hide');
+init(buyText,'hide2');
+init(buyRight,'hide');
+init(form,'hide');
+
 
 function classMgmt(element,rClass,aClass) {
    element.classList.remove(rClass);
