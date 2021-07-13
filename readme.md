@@ -1,6 +1,6 @@
 ![Home page snapshot](home-page-snapshot.png)
 
-> #### Dynamic, appealing landing page for a mouse.
+> #### _Dynamic, appealing landing page for a mouse._
 
 > #### **Checkout site [here](https://okay-head.github.io/Landing-page/)**
 
