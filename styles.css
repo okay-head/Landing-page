@@ -88,20 +88,7 @@ img {
    width: 88%;
 }
 
-/* 
-#name1::after {
-   content: "";
-   width: 88%;
-   background-color: white;
-   height: 10px;
-   position: absolute;
-   bottom: 0%;
-   left: 1%;
-} */
-
 nav {
-   /* display: inline-block; */
-   /* width: 40%; */
    padding-left: 56%;
    padding-right: 4%;
    position: relative;
@@ -117,14 +104,9 @@ nav span {
 ul {
    list-style-type: none;
    display: flex;
-   /* flex-flow: row nowrap; */
    justify-content: flex-end;
    align-items: center;
-   /* background-color: rgb(15, 15, 15);
-         border-radius: 30px; */
-   /* font-family: 'Montserrat', sans-serif; */
 }
-
 ul li {
    flex: 1 1 0;
 }
@@ -134,8 +116,6 @@ ul li a {
    text-decoration: none;
    position: relative;
    display: inline-block;
-   /* border: 1px solid red; */
-   /* padding: 20px 35px; */
    padding: 13px 23px;
    text-transform: uppercase;
    color: white;
@@ -335,30 +315,10 @@ h3 {
 .width-in2{
    width: 15.7%;
 }
-/* 
-.page-review h1::after,
-.contact h1::after {
-   content: "";
-   width: 15.7%;
-   background-color: #0ed9ff;
-   height: 8px;
-   position: absolute;
-   bottom: -27%;
-   left: 41.5%;
-} */
-
-/* 
-      .page-review h1::after{
-         add an underline here
-      } */
 .page-review .box {
    text-align: initial;
    width: 75%;
    margin: 0 auto;
-   /* border: 1px solid cyan; */
-   /* box-shadow: 0 0 5px black; */
-   /* padding: 1em; */
-   /* background-color: rgb(0 0 0 / 9%); */
    display: flex;
    flex-flow: row wrap;
    justify-content: space-between;
@@ -427,35 +387,8 @@ h3 {
    height: 51%;
    margin-left: 18%;
    top: 10%;
-   /* box-shadow: 2px 2px 2px white,
-         -2px -2px 2px white; */
-   /* box-shadow: 2px 0 0 white,
-            0 2px 0 white; */
 }
-
-/* .buy .right::after {
-         content: '';
-         width: 61%;
-         height: 47%;
-         position: absolute;
-         left: 20%;
-         top: 14%;
-         border-right: 3px solid rgb(0, 68, 255);
-         border-bottom: 3px solid rgb(0, 68, 255);
-         transform: skew(-3deg, 2deg);
-         transform: skew(-3deg, 2deg);
-
-         content: '';
-         width: 61%;
-         height: 46%;
-         position: absolute;
-         left: 19.7%;
-         top: 14%;
-         border: 2px solid white;
-         box-shadow: 2px 2px 2px white;
-      } */
-
-.buy .right a {
+   .buy .right a {
    display: inline-block;
    text-decoration: none;
    background-color: black;
@@ -467,8 +400,6 @@ h3 {
    left: 37%;
    font-size: 1.4em;
    font-weight: 900;
-   /* border: 5px solid #005fff; */
-   /* box-shadow: 3px 3px 4px #005fff; */
    border-radius: 4px;
    transition: 0.5s ease all;
 }
@@ -493,7 +424,6 @@ h3 {
 }
 
 label {
-   /* text-align: left; */
    display: block;
    margin-bottom: 5px;
    font-weight: bold;
